@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useParams, Outlet } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 
 import axios from "axios";
 
 const Details = () => {
 
-    let { id } = useParams()
+    const { id } = useParams()
 
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
@@ -16,6 +16,8 @@ const Details = () => {
             .then(response => setDetails(response.data))
             .catch(() => setError("Something went wrong"))
             .finally(() => setIsLoading(false))
+            
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return ( 

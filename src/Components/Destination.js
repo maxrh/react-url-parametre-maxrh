@@ -7,10 +7,10 @@ const Destination = (props) => {
 
         <li className="item">
             
-            <img src={`/assets/img/${props.image}`} />
+            <img src={`/assets/img/${props.image}`} alt="Alt Text" />
 
             <div class="item--footer">
-                <i class="fa-solid fa-heart favorite" data-id={`${props.id}`}></i>
+                <i class="fa-solid fa-heart favorite" data-id={`${props.id}`} ></i>
                 <Link to={`/${props.id}/details`} >more</Link>
             </div>
 
