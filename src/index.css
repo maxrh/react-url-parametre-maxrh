@@ -1,13 +1,102 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1 {
+    font-size: 38px;
+}
+
+.destination {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .1rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    object-fit: cover;
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+    text-transform: uppercase;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 20px;
+    flex: 0 1 25%;
+    box-sizing: border-box;
+}
+
+.item--footer {
+    display: flex;
+    justify-content: space-between;
+    background: #eee;
+    padding: 20px;
+}
+
+.favorite {
+    color: #aaa;
+}
+
+.favorite.active {
+    color: red !important
+}
+
+
+.details-view article {
+    display: flex;
+}
+
+.details-view .detail--content {
+    background: #eee;
+    padding: 30px;
+}
+
+.details-view .detial--image {
+    margin-right: 0px;
+    position: relative;
+}
+
+.details-view .detial--image img {
+    height: auto;
+}
+
+.details-view article > div {
+    flex: 0 1 50%;
+}
+
+.details-view .favorite-wrap {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    color: #fff;
+    font-size: 14px;
+}
+
+.details-view .favorite-wrap .favorite {
+    color: #fff;
+    margin-right: 5px;
 }
