@@ -20,7 +20,7 @@ const Destinations = () => {
     return (
 
         <article>
-            <h1>Here are the users</h1>
+            <h1>Here are the destinations</h1>
             { isLoading }
             { error && <p>{error}</p>}
             { destinations && 
@@ -31,7 +31,7 @@ const Destinations = () => {
                 </ul> 
             }
         </article> 
-        
+
      );
 }
 
