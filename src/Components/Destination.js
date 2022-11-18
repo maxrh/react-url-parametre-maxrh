@@ -11,7 +11,7 @@ const Destination = (props) => {
 
             <div class="item--footer">
                 <i class="fa-solid fa-heart favorite" data-id={`${props.id}`}></i>
-                <Link to={`/details/:${props.id}`} >more</Link>
+                <Link to={`/${props.id}/details`} >more</Link>
             </div>
 
         </li>

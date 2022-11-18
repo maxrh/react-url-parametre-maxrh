@@ -5,16 +5,14 @@ import axios from "axios";
 
 const Details = () => {
 
-    let { pageid } = useParams()
-
-    console.log(pageid)
+    let { id } = useParams()
 
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
     const [details, setDetails] = useState();
 
     useEffect(() => {
-        axios.get("http://localhost:4000/destinations")
+        axios.get(`http://localhost:4000/destinations/${id}`)
             .then(response => setDetails(response.data))
             .catch(() => setError("Something went wrong"))
             .finally(() => setIsLoading(false))
@@ -29,11 +27,13 @@ const Details = () => {
             { details && 
                 <ul className="items">
 
-                    {details.map(detail => ( 
+                    <h4>{details.destination}</h4>
 
-                        console.log(detail)
+                    {console.log(details)}
 
-                    ))}
+                        
+
+                   
 
                 </ul> 
             }
