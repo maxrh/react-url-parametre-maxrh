@@ -17,11 +17,10 @@ const Details = () => {
             .catch(() => setError("Something went wrong"))
             .finally(() => setIsLoading(false))
             
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    }, [id]);
 
     return ( 
-        <article>
+        <>
 
             <h1>Here are the details</h1>
             { isLoading }
@@ -30,17 +29,11 @@ const Details = () => {
                 <ul className="items">
 
                     <h4>{details.destination}</h4>
-
-                    {console.log(details)}
-
-                        
-
-                   
-
+                    
                 </ul> 
             }
 
-        </article> 
+        </> 
      );
 
 }

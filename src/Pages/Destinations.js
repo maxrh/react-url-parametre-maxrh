@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import Destination from "./Destination";
+import Destination from "../Components/Destination";
 
 const Destinations = () => {
 
@@ -9,7 +9,6 @@ const Destinations = () => {
     const [destinations, setDestinations] = useState();
 
     useEffect(() => {
-
         axios.get("http://localhost:4000/destinations")
             .then(response => setDestinations(response.data))
             .catch(() => setError("Something went wrong"))
@@ -19,8 +18,8 @@ const Destinations = () => {
 
     return (
 
-        <article>
-            <h1>Here are the destinations</h1>
+        <>
+            <h1>Her er Destinations</h1>
             { isLoading }
             { error && <p>{error}</p>}
             { destinations && 
@@ -30,7 +29,7 @@ const Destinations = () => {
                     ))}
                 </ul> 
             }
-        </article> 
+        </> 
 
      );
 }

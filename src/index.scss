@@ -6,6 +6,18 @@ h1 {
     font-size: 38px;
 }
 
+.navigation {
+
+    a {
+        margin-right: 10px;
+
+        &:last-child {
+            margin: 0;
+        }
+    }
+    
+}
+
 .destination {
     text-transform: uppercase;
     font-weight: 400;
@@ -24,7 +36,6 @@ img {
 a {
     text-decoration: none;
     color: #222;
-    text-transform: uppercase;
 }
 
 a:hover {
