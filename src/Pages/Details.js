@@ -26,11 +26,28 @@ const Details = () => {
             { isLoading }
             { error && <p>{error}</p>}
             { details && 
-                <ul className="items">
+                <article className="details">
 
-                    <h4>{details.destination}</h4>
-                    
-                </ul> 
+                    <div className="details__image">
+                        <img src={`/assets/img/${details.image}`} alt="" />
+                    </div>
+
+                    <div className="details__content">
+
+                        <p>{details.destination}</p>
+                        <h1>{details.title}</h1>
+                        <p>{details.subtitle}</p>
+                        <p>{details.text}</p>
+
+                        <ul>
+                            {details.facilities.map(facility => ( 
+                                <li>{facility}</li>
+                            ))}
+                        </ul>
+
+                    </div>
+
+                </article> 
             }
 
         </> 

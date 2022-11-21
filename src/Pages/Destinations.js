@@ -6,7 +6,7 @@ const Destinations = () => {
 
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState();
-    const [destinations, setDestinations] = useState();
+    const [destinations, setDestinations] = useState(); 
 
     useEffect(() => {
         axios.get("http://localhost:4000/destinations")

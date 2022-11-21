@@ -77,37 +77,39 @@ a:hover {
 }
 
 
-.details-view article {
+.details {
     display: flex;
-}
+    margin-bottom: 4rem;
 
-.details-view .detail--content {
-    background: #eee;
-    padding: 30px;
-}
+    > div {
+        flex: 0 1 50%;
+    }
 
-.details-view .detial--image {
-    margin-right: 0px;
-    position: relative;
-}
+    &__content {
+        background: #eee;
+        padding: 30px;
+    }
 
-.details-view .detial--image img {
-    height: auto;
-}
+    &__image {
+        margin-right: 0px;
+        position: relative;
 
-.details-view article > div {
-    flex: 0 1 50%;
-}
+        img {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 
-.details-view .favorite-wrap {
-    position: absolute;
-    top: 30px;
-    left: 30px;
-    color: #fff;
-    font-size: 14px;
-}
+    .favorite-wrap {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #fff;
+        font-size: 14px;
+    }
 
-.details-view .favorite-wrap .favorite {
-    color: #fff;
-    margin-right: 5px;
+    .favorite-wrap .favorite {
+        color: #fff;
+        margin-right: 5px;
+    }
 }

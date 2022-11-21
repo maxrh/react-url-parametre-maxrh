@@ -1,15 +1,24 @@
 import Header from './Templates/Header';
 import Footer from './Templates/Footer';
-import { Outlet } from 'react-router-dom';
+import Main from './Templates/main';
+
 
 function App() {
+
     return (
+
         <div className="App">
+
             <Header />
-            <Outlet />
+
+            <Main />
+            
             <Footer />
+
         </div>
+
     );
+
 }
 
 export default App;
